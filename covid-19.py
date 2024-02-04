@@ -7,5 +7,7 @@ df1 = pd.DataFrame(df)
 # Generate a profile report
 st.title('EDA Analysis of Covid-19 Cases')
 profile = ProfileReport(df, explorative=True)
-st_profile_report(profile)
+profile.to_file("index.html")
+# or
+#profile.to_notebook_iframe()
 
